@@ -6,6 +6,7 @@ node_modules
 
 # build to distribute
 build
+out
 
 # Apple OSX finder
 *.DS_Store
@@ -20,3 +21,4 @@ npm-debug.log
 yarn-error.log
 .env
 .eslintcache
+webpack-stats.json

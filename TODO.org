@@ -1,0 +1,11 @@
+#+STARTUP: showeverything
+
+** Build
+*** TODO: sass is not supported in electron-compilers https://github.com/electron/electron-compilers/pull/5
+*** TODO: how to customize babel plugins and presets used in electron-forge 
+
+** React webapp Workflow
+*** TODO: can import css using babel. how to do the same for electron ? right now using a html `link` tag
+
+** Dev workflow
+*** TODO: watch build/css/main.css using nodemon

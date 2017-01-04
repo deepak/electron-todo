@@ -3,7 +3,7 @@ var path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     PATHS = {
-      src: path.join(__dirname, 'src'),
+      src: path.join(__dirname, 'src/react-app'),
       build: path.join(__dirname, 'build'),
       node_modules: path.join(__dirname, "node_modules")
     };

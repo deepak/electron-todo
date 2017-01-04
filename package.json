@@ -1,21 +1,56 @@
 {
-  "name": "react-todo",
+  "name": "electron-todo",
+  "productName": "electron-todo",
   "version": "0.0.1",
-  "description": "Todo app written in ES6 + React + Redux + Webpack",
-  "main": "src/index.jsx",
+  "description": "Todo app written in ES6 + React + Redux + Webpack for Electron",
+  "main": "src/main-process/main.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "electron-forge start",
+    "lint": "eslint src",
+    "ui:build-css": "node-sass --include-path src/react-app/css src/react-app/css/main.scss build/css/main.css",
+    "package": "npm run package:osx && npm run package:win32 && npm run package:win64",
+    "package:osx": "electron-forge package --platform=mas --arch=x64",
+    "package:win32": "electron-forge package --platform=win32 --arch=ia32",
+    "package:win64": "electron-forge package --platform=win32 --arch=x64",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "ES6",
     "react",
     "redux",
-    "webpack"
+    "webpack",
+    "electron"
   ],
   "author": "Deepak Kannan",
   "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {},
+      "electronWinstallerConfig": {
+        "name": "electron_todo"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      }
+    }
+  },
   "dependencies": {
+    "electron-compile": "^5.1.2",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.1",
@@ -27,7 +62,14 @@
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.26.1",
+    "electron-prebuilt-compile": "1.4.12",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.8.0",
     "html-webpack-plugin": "^2.25.0",
     "node-sass": "^4.1.1",
     "sass-loader": "^4.1.1",

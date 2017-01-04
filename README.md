@@ -8,9 +8,10 @@ Todo app copied from various places:
 # Development
 
 ```sh
-  $ npm install -g yarn
+  $ npm install -g yarn electron-forge
   $ yarn install
-  $ DEBUG=* PORT=3000 HOST='0.0.0.0' npm start
+  $ DEBUG=* npm run ui:build-css
+  $ DEBUG=* npm start
 ```
 
-Open "http://0.0.0.0:3000/" in a browser
+run `DEBUG=* npm run package:osx` or similar to test a one-off build
