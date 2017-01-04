@@ -9,3 +9,7 @@
 
 ** Dev workflow
 *** TODO: watch build/css/main.css using nodemon
+
+** Test
+*** TODO: local "npm run start" has a menu. but a build with "npm run package" does not. test if adding a menu will be a problem
+*** TODO: test that copy-paste works on windows with a packaged build ie. "npm run package:win64"
