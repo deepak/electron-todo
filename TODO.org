@@ -13,3 +13,12 @@
 ** Test
 *** TODO: local "npm run start" has a menu. but a build with "npm run package" does not. test if adding a menu will be a problem
 *** TODO: test that copy-paste works on windows with a packaged build ie. "npm run package:win64"
+
+** Example
+*** TODO: css modules
+*** DONE TODO: react router
+CLOSED: [2017-01-10 Tue 17:22] use react-router hashHistory https://gist.github.com/deepak/10cce78251195ddfc3b3154a3708c1be
+*** DONE TODO: use redux-thunk to fetch data on the renderer process
+CLOSED: [2017-01-10 Tue 17:25] easy. exact same code on react. https://github.com/deepak/react-todo/commit/4ae1e2c0c3e51fb7da8e44abb63e103fa92ea611 (Add react-router and api calls using redux-thunk)
+*** TODO: fetch data from the main process and use it in the renderer process. can/should we use redux-thunk here
+*** TODO: built using webpack
